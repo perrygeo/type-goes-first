@@ -8,7 +8,7 @@ with codecs_open('README.rst', encoding='utf-8') as f:
 
 
 setup(name='type-goes-first',
-      version='0.0.1',
+      version='0.0.2',
       description=u"Ensures that a FeatureCollection is declared early",
       long_description=long_description,
       classifiers=[],
@@ -21,7 +21,7 @@ setup(name='type-goes-first',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'click'
+          'click', 'cligj'
       ],
       entry_points="""
       [console_scripts]
