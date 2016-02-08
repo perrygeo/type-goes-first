@@ -1,10 +1,13 @@
 import click
 import cligj
 import json
+from collections import OrderedDict
+
 
 @click.command('tgf')
 @cligj.features_in_arg
 def cli(features):
     click.echo(json.dumps(
-        {'type': 'FeatureCollection',
-         'features': list(features)}))
+        OrderedDict([
+            ('type', 'FeatureCollection'),
+            ('features', list(features))])))
